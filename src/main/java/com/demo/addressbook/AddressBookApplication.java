@@ -1,4 +1,4 @@
-package com.ericsson.vodafonenetadm.addressbook;
+package com.demo.addressbook;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;

@@ -1,4 +1,4 @@
-package com.ericsson.vodafonenetadm.springboottest;
+package com.demo.springboottest;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
