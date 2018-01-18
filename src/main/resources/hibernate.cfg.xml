@@ -11,9 +11,6 @@
         <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/addressbook</property>
         <property name="show_sql">true</property>
         <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQL82Dialect</property>
-
-		<mapping resource="hibernate/user.hbm.xml"/>
-		<mapping resource="hibernate/address.hbm.xml"/>
-
+        <!--mapping class=""></mapping-->
     </session-factory>
 </hibernate-configuration>

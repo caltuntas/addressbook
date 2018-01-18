@@ -4,38 +4,47 @@ public class Address {
 
     private int id;
     private String city;
+    private int userId;
+    private User user;
     private String fullAddress;
-    private  int userId;
 
-	public int getId() {
-		return id;
-	}
+    public int getId() {
+        return id;
+    }
 
-	public void setId(int id) {
-		this.id = id;
-	}
+    public void setId(int id) {
+        this.id = id;
+    }
 
-	public String getCity() {
-		return city;
-	}
+    public String getCity() {
+        return city;
+    }
 
-	public void setCity(String city) {
-		this.city = city;
-	}
+    public void setCity(String city) {
+        this.city = city;
+    }
 
-	public String getFullAddress() {
-		return fullAddress;
-	}
+    public String getFullAddress() {
+        return fullAddress;
+    }
 
-	public void setFullAddress(String fullAddress) {
-		this.fullAddress = fullAddress;
-	}
+    public void setFullAddress(String fullAddress) {
+        this.fullAddress = fullAddress;
+    }
 
-	public int getUserId() {
-		return userId;
-	}
+    public int getUserId() {
+        return userId;
+    }
 
-	public void setUserId(int userId) {
-		this.userId = userId;
-	}
+    public void setUserId(int userId) {
+        this.userId = userId;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
 }
