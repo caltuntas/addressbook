@@ -11,7 +11,7 @@
 		</meta>
 
 		<id name = "id" type = "int" column = "id">
-
+			<generator class="identity"></generator>
 		</id>
 
 		<property name = "email" column = "email" type = "string"/>
