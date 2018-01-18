@@ -11,7 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.persistence.criteria.CriteriaQuery;
 
-public abstract class GenericDao<E extends Serializable> implements IGenericDao<E> {
+public class GenericDao<E extends Serializable> implements IGenericDao<E> {
     @Autowired
     private SessionFactory sessionFactory;
 

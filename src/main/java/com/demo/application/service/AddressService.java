@@ -5,7 +5,7 @@ import com.demo.data.repository.IGenericDao;
 import com.demo.domain.model.Address;
 import org.springframework.beans.factory.annotation.Autowired;
 
-public class AddressService {
+public class AddressService implements IAddressService {
 
     @Autowired
     private IGenericDao<Address> addressDao;
