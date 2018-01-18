@@ -15,8 +15,8 @@
 		</id>
 
 		<property name = "email" column = "email" type = "string"/>
-		<property name = "firstName" column = "first_name" type = "string"/>
-		<property name = "lastName" column = "last_name" type = "string"/>
+		<property name = "firstName" column = "firstname" type = "string"/>
+		<property name = "lastName" column = "lastname" type = "string"/>
 
 	</class>
 </hibernate-mapping>

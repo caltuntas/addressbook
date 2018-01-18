@@ -5,55 +5,69 @@ import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
 import java.util.List;
 
+import com.demo.data.utility.HibernateUtil;
+import com.demo.data.utility.HibernateUtility;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Service;
 
 import javax.persistence.criteria.CriteriaQuery;
 
-public class GenericDao<E extends Serializable> implements IGenericDao<E> {
-    @Autowired
+@Repository
+public  class GenericDao<E> implements IGenericDao<E> {
+
+
     private SessionFactory sessionFactory;
 
-    protected Class<E> daoType;
+    protected Class< E> daoType;
+    Session session;
 
+    public void setDaoType(Class<E> daoType) {
+        this.daoType = daoType;
 
+    }
     public GenericDao() {
-        Type t = getClass().getGenericSuperclass();
-        ParameterizedType pt = (ParameterizedType) t;
-        daoType = (Class) pt.getActualTypeArguments()[0];
+        // Class asd=getClass();
+        //Type asdasd= asd.getGenericSuperclass();
+        //ParameterizedType asd1=(ParameterizedType) asdasd;
+        //this.daoType = (Class<E>) ((ParameterizedType) getClass().getGenericSuperclass()).getActualTypeArguments()[0];
+        sessionFactory=  HibernateUtil.getInstance().getSessionFactory();
+        session=sessionFactory.openSession();
+        session.beginTransaction();
+
     }
 
-    protected Session currentSession() {
-        return sessionFactory.getCurrentSession();
-    }
+
 
     @Override
     public void save(E entity) {
-        currentSession().save(entity);
+
+        session.save(entity);
     }
 
     @Override
     public void saveOrUpdate(E entity) {
-        currentSession().saveOrUpdate(entity);
+        session.saveOrUpdate(entity);
     }
 
 
     @Override
     public void remove(E entity) {
-        currentSession().delete(entity);
+        session.delete(entity);
     }
 
     @Override
     public E findById(int id) {
-        return (E) currentSession().get(daoType, id);
+        return (E) session.get(daoType, id);
     }
 
     @Override
     public List<E> getAll() {
 
-        CriteriaQuery<E> query = currentSession().getCriteriaBuilder().createQuery(daoType);
+        CriteriaQuery<E> query = session.getCriteriaBuilder().createQuery((Class) daoType);
 
-        return currentSession().createQuery(query).getResultList();
+        return session.createQuery(query).getResultList();
     }
 }

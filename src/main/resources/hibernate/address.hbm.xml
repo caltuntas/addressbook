@@ -15,7 +15,7 @@
 		</id>
 
 		<property name = "city" column = "city" type = "string"/>
-		<property name = "fullAddress" column = "full_address" type = "string"/>
+		<property name = "fullAddress" column = "fullAddress" type = "string"/>
 
 	</class>
 </hibernate-mapping>
