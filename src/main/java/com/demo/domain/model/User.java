@@ -3,9 +3,49 @@ package com.demo.domain.model;
 import java.util.ArrayList;
 
 public class User {
-    public int id;
-    public String email;
-    public String nameSurname;
-    public ArrayList<Address> addresses;
+    private int id;
+    private String email;
+    private String password;
+    private String nameSurname;
+    private ArrayList<Address> addresses;
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public String getNameSurname() {
+        return nameSurname;
+    }
+
+    public void setNameSurname(String nameSurname) {
+        this.nameSurname = nameSurname;
+    }
+
+    public ArrayList<Address> getAddresses() {
+        return addresses;
+    }
+
+    public void setAddresses(ArrayList<Address> addresses) {
+        this.addresses = addresses;
+    }
 }
