@@ -10,13 +10,13 @@ public class AddressService {
     @Autowired
     private IGenericDao<Address> addressDao;
 
-    public void CreateAddess(CreateAddressRequest request) {
+    public void CreateAddress(CreateAddressRequest request) {
 
-        Address addres = new Address();
-        addres.setCity(request.city);
-        addres.setFullAddress(request.fullAddress);
-        addres.setUserId(request.userId);
+        Address address = new Address();
+        address.setCity(request.city);
+        address.setFullAddress(request.fullAddress);
+        address.setUserId(request.userId);
 
-        addressDao.save(addres);
+        addressDao.save(address);
     }
 }
