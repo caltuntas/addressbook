@@ -5,6 +5,7 @@ public class Address {
     private int id;
     private String city;
     private String fullAddress;
+    private  int userId;
 
 	public int getId() {
 		return id;
@@ -28,5 +29,13 @@ public class Address {
 
 	public void setFullAddress(String fullAddress) {
 		this.fullAddress = fullAddress;
+	}
+
+	public int getUserId() {
+		return userId;
+	}
+
+	public void setUserId(int userId) {
+		this.userId = userId;
 	}
 }
