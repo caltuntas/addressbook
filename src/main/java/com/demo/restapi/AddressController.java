@@ -11,13 +11,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/address")
 public class AddressController {
-    AddressService addressService;
-
     @Autowired
-    AddressController(AddressService addressService) {
-        this.addressService = addressService;
-    }
-
+    AddressService addressService;
 
     @RequestMapping(method = RequestMethod.POST,value = "/address/create")
     boolean create(@RequestBody CreateAddressRequest model) {
