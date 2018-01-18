@@ -4,14 +4,14 @@
 		"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 
 <hibernate-mapping>
-	<class name = "com.demo.domain.model.User" table = "user">
+	<class name = "com.demo.domain.model.User" table = "address_book_user" catalog="addressbook">
 
 		<meta attribute = "class-description">
 			This class contains the user detail.
 		</meta>
 
 		<id name = "id" type = "int" column = "id">
-			<generator class="native"/>
+
 		</id>
 
 		<property name = "email" column = "email" type = "string"/>
