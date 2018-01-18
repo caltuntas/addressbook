@@ -6,7 +6,8 @@ public class User {
     private int id;
     private String email;
     private String password;
-    private String nameSurname;
+    private String firstName;
+    private String lastName;
     private ArrayList<Address> addresses;
 
     public int getId() {
@@ -33,14 +34,6 @@ public class User {
         this.password = password;
     }
 
-    public String getNameSurname() {
-        return nameSurname;
-    }
-
-    public void setNameSurname(String nameSurname) {
-        this.nameSurname = nameSurname;
-    }
-
     public ArrayList<Address> getAddresses() {
         return addresses;
     }
@@ -48,4 +41,20 @@ public class User {
     public void setAddresses(ArrayList<Address> addresses) {
         this.addresses = addresses;
     }
+
+	public String getFirstName() {
+		return firstName;
+	}
+
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+	public String getLastName() {
+		return lastName;
+	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
 }
